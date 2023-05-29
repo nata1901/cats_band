@@ -26,6 +26,33 @@ fetch(path + "/show")
         }
     });
 
+    mdEditinfoBtn.addEventListener("click", e => {
+        mdEditinfo.classList.toggle("active");
+        mdMoreinfo.classList.remove("active");
+    })
+    mdEditinfoClose.addEventListener("click", e => {
+        mdEditinfo.classList.remove("active");
+    })
+    mdEditinfo.addEventListener("click", e => {
+        if (e.target === e.currentTarget) {
+            mdEditinfo.classList.remove("active");
+        }
+    });
+    
+    
+    
+    // Для закрывания попапа //
+    // Закрываем по кнопке в окне
+    mdMoreinfoClose.addEventListener("click", e => {
+        mdMoreinfo.classList.remove("active");
+    })
+    // Закрываем по клику за пределы окна
+    mdMoreinfo.addEventListener("click", e => {
+        if (e.target === e.currentTarget) {
+            mdMoreinfo.classList.remove("active");
+        }
+    });
+
 addForm.elements.image.addEventListener("change", e => {
     prevTag.style.backgroundImage = `url(${e.currentTarget.value})`;
 })

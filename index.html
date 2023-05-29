@@ -19,27 +19,91 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h2>Добавить котика</h2>
-            <form id="add">
+            <form class="form" id="add">
+
+
                 <div>
-                <input type="text" name="name" placeholder="Имя котика">
+                    <label class="label" for="name">Введите имя котика</label>
+                    <input class="input" name="name" type="text" id="name" placeholder="Имя котика">
                 </div>
+
                 <div>
-                    <input type="url" name="image" placeholder="Фото котика">
-                    </div>
-                    <div>
-                        <label> 
-                            <input type="checkbox" name="favorite">
-                            Любимчик
-                        </label>
-                    </div>
-                    <div class="preview"></div>
-                    <button type="submit">Добавить котика</button>
+                    <label class="label" for="image">Введите ссылку на картинку котика</label>
+                    <input class="input" type="url" id="image" name="image" placeholder="Фото котика">
+                </div>
+
+                <div>
+                    <label class="label" for="age">Введите возраст котика</label>
+                    <input class="input" type="number" id="age" name="age" min=1 max=40 placeholder="от 1 до 40">
+                </div>
+
+                <div>
+                    <label class="label" for="rate">Введите рейтинг котика</label>
+                    <input class="input" type="number" name="rate" id="rate" min=1 max=5 placeholder="от 1 до 5">
+                </div>
+
+                <div>
+                    <label class="label" for="description">Введите описание котика</label>
+                    <textarea class="input descr" id="description" placeholder="Расскажите о котике"></textarea>
+                </div>
+
+                <div>
+                    <label class="label" for="favorite">Является ли котик любимым</label>
+                    <input class="checkbox" type="checkbox" name="favorite" id="favorite">
+                </div>
+                <div class="preview"></div>
+                <button type="submit">Добавить котика</button>
             </form>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="more_info">
+        <div class="modal">
+            <button class="more_info_close btn"><i class="fa-solid fa-xmark"></i></button>
+            <button class="more_info_edit btn"><i class="fa-solid fa-file-pen"></i></button>
+            <h2>Подробнее о коте</h2>
+
+            <div class="info_line">
+                <b>id</b>
+                <p id="info_id"> </p>
+            </div>
+
+            <div class="info_line">
+                <b>Имя котика</b>
+                <p id="info_name"> </p>
+            </div>
+
+            <div class="info_line">
+                <b>Котик любимый?</b>
+                <p id="info_favorite"> </p>
+            </div>
+
+            <div class="info_line">
+                <b>Рейтинг котика</b>
+                <p id="info_rate"> </p>
+            </div>
+
+            <div class="info_line">
+                <b>Сколько лет котику</b>
+                <p id="info_age"> </p>
+            </div>
+
+            <div class="info_line">
+                <b>Описание котика</b>
+                <p id="info_description"> </p>
+            </div>
+            <div id="picture" class="preview info_pic"></div>
+
+
         </div>
     </div>
     
     <script src="js/function.js"></script>
     <script src="js/global.js"></script>
-<script src="script.js"></script>
+<script>"script.js"</script>
 </body>
 </html>

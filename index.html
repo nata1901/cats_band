@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,38 +18,29 @@
     <div class="wrapper"></div>
     <div class="modal-block">
         <div class="modal">
-            <button class="modal-close btn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+            <button class="modal-close btn"><i class="fa-solid fa-xmark"></i></button>
             <h2>Добавить котика</h2>
             <form class="form" id="add">
-
-
                 <div>
                     <label class="label" for="name">Введите имя котика</label>
                     <input class="input" name="name" type="text" id="name" placeholder="Имя котика">
                 </div>
-
                 <div>
                     <label class="label" for="image">Введите ссылку на картинку котика</label>
                     <input class="input" type="url" id="image" name="image" placeholder="Фото котика">
                 </div>
-
                 <div>
                     <label class="label" for="age">Введите возраст котика</label>
                     <input class="input" type="number" id="age" name="age" min=1 max=40 placeholder="от 1 до 40">
                 </div>
-
                 <div>
                     <label class="label" for="rate">Введите рейтинг котика</label>
                     <input class="input" type="number" name="rate" id="rate" min=1 max=5 placeholder="от 1 до 5">
                 </div>
-
                 <div>
                     <label class="label" for="description">Введите описание котика</label>
                     <textarea class="input descr" id="description" placeholder="Расскажите о котике"></textarea>
                 </div>
-
                 <div>
                     <label class="label" for="favorite">Является ли котик любимым</label>
                     <input class="checkbox" type="checkbox" name="favorite" id="favorite">
@@ -54,54 +48,74 @@
                 <div class="preview"></div>
                 <button type="submit">Добавить котика</button>
             </form>
-
-
-
-
         </div>
     </div>
-
     <div class="more_info">
         <div class="modal">
             <button class="more_info_close btn"><i class="fa-solid fa-xmark"></i></button>
             <button class="more_info_edit btn"><i class="fa-solid fa-file-pen"></i></button>
             <h2>Подробнее о коте</h2>
-
             <div class="info_line">
                 <b>id</b>
                 <p id="info_id"> </p>
             </div>
-
             <div class="info_line">
                 <b>Имя котика</b>
                 <p id="info_name"> </p>
             </div>
-
             <div class="info_line">
                 <b>Котик любимый?</b>
                 <p id="info_favorite"> </p>
             </div>
-
             <div class="info_line">
                 <b>Рейтинг котика</b>
                 <p id="info_rate"> </p>
             </div>
-
             <div class="info_line">
                 <b>Сколько лет котику</b>
                 <p id="info_age"> </p>
             </div>
-
             <div class="info_line">
                 <b>Описание котика</b>
                 <p id="info_description"> </p>
             </div>
             <div id="picture" class="preview info_pic"></div>
-
-
         </div>
     </div>
-    
+    <div class="edit_info">
+        <div class="modal">
+            <button class="edit_info_close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Форма для редактирования</h2>
+            <form class="form" id="edit">
+                <div>
+                    <label class="label" for="name">Введите новое имя</label>
+                    <input id="info_edit_name" class="input" name="name" type="text" id="name">
+                </div>
+                <div>
+                    <label class="label" for="image">Введите ссылку на новую картинку</label>
+                    <input id="info_edit_image" class="input" type="url" id="image" name="image" placeholder="Фото котика">
+                </div>
+                <div>
+                    <label class="label" for="age">Введите новый возраст котика</label>
+                    <input id="info_edit_age" class="input" type="number" id="age" name="age" min=1 max=40 placeholder="от 1 до 40">
+                </div>
+                <div>
+                    <label class="label" for="rate">Введите новый рейтинг</label>
+                    <input id="info_edit_rate" class="input" type="number" name="rate" id="rate" min=1 max=5 placeholder="от 1 до 5">
+                </div>
+                <div>
+                    <label class="label" for="description">Введите новое описание котика</label>
+                    <textarea id="info_edit_description" class="input descr" id="description"></textarea>
+                </div>
+                <div>
+                    <label class="label info_line" for="favorite" >Является ли котик любимым</label>
+                    <input id="info_edit_favorite" class="checkbox" type="checkbox" name="favorite" id="favorite">
+                </div>
+                <div id="picture_edit" class="preview"></div>
+                <button type="submit">Изменить котика</button>
+                </form>
+        </div>
+    </div>
     <script src="js/function.js"></script>
     <script src="js/global.js"></script>
 <script>"script.js"</script>

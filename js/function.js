@@ -195,10 +195,8 @@ function setLike(el, id, like) {
     el.classList.toggle("fa-regular");
 
     fetch(path + "/update/" + id, {
-        method: "put",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify({favorite: like})
     })
 .then(res => res.json())
@@ -217,7 +215,7 @@ function setLike(el, id, like) {
 function deleteCard(id, el) {
     if (id) {
       fetch(`${path}/delete/${id}`, {
-        method: "delete"
+        method: "DELETE"
       })
         .then(res => {
           if (res.status === 200) {
